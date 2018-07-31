@@ -115,4 +115,16 @@ And then at the bottom of the file:
 
 [Link Three][1]
 
+[This also goes to the same link][1]
+
 [1]: https://github.com/DanBuda11
+
+## Images
+
+The basic format is: `![]()` where the [] include the alt text and the () includes the image link. Additionally, you can put hover text inside the () after the image link wrapped in quotes:
+
+```
+![Random Unsplash picture](https://source.unsplash.com/random "Random image)
+```
+
+![Random Unsplash picture](https://source.unsplash.com/random 'Random image')
