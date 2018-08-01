@@ -255,22 +255,105 @@ Sentence two.
 
 ## Horizontal Rules
 
-Create a horizontal line by using at least 3 "=" or "-" and remember to lease space between them and above text to avoid them being conveted into H1 or H2 tags:
+Create a horizontal line by using at least 3 "-", and remember to leave space between the "-" and above text to avoid them being conveted into H1 tags:
 
 ```
 Words and stuff
 
 ---
-
-===
+Words below
 ```
 
 will appear as:
 
 Words and stuff
 
-===
-
 ---
 
----
+Words below
+
+## Block Quotes
+
+```
+> Hello this is a quote
+```
+
+ends up looking like this:
+
+> Hello this is a quote
+
+## Code Blocks
+
+Create a code block by tabbing in twice to get this:
+
+    var x = 100;
+    const dog = 'snickers';
+
+Or use "```" above and below the text to do the same thing. You can also add the name of the language the text is in to make it format even more:
+
+    ```js
+    var x = 100;
+    const dog = 'snickers';
+    ```
+
+will end up looking like:
+
+```js
+var x = 100;
+const dog = 'snickers';
+```
+
+And inline code tags can be done with backticks:
+
+```
+Did you try `var x = 100;`?
+```
+
+shows up as:
+
+Did you try `var x = 100;`?
+
+`diff` can also be used in place of a language name:
+
+    ```diff
+    var x = 100;
+    - var y = 200;
+    + var y = 300;
+    ```
+
+outputs as:
+
+```diff
+var x = 100;
+- var y = 200;
++ var y = 300;
+```
+
+## Tables
+
+Placing vertical lines on both side of content, as well as creating a second line with ":" and dashes, will create a table. Note that the placement of colons determines whether the content is left, right, or center aligned:
+
+    | Dog's Name | Dog's Age | Dog's Color |
+    | :--------- | --------: | :---------: |
+    | Spot       | 2         | Black       |
+    | Rover      | 4         | Brown       |
+
+
+
+| Dog's Name | Dog's Age | Dog's Color |
+| :--------- | --------: | :---------: |
+| Spot       | 2         | Black       |
+| Rover      | 4         | Brown       |
+
+
+## Checkboxes
+
+Create checkboxes by making a list and adding square brackets with a space. Placing an "X" inside the brackets will add the check:
+
+    * [ ] Wake up
+    * [X] Brush teeth
+    * [ ] Go to work
+
+* [ ] Wake up
+* [X] Brush teeth
+* [ ] Go to work
