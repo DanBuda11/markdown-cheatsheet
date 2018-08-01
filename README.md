@@ -121,10 +121,156 @@ And then at the bottom of the file:
 
 ## Images
 
-The basic format is: `![]()` where the [] include the alt text and the () includes the image link. Additionally, you can put hover text inside the () after the image link wrapped in quotes:
+The basic format is: `![]()` where the [] include the alt text (optional) and the () includes the image link. Additionally, you can put hover text inside the () after the image link wrapped in quotes:
 
 ```
 ![Random Unsplash picture](https://source.unsplash.com/random "Random image)
 ```
 
-![Random Unsplash picture](https://source.unsplash.com/random 'Random image')
+![Random picture](https://picsum.photos/200 'Random image')
+
+You can also make references to the image link in the same way you do with a url link:
+
+```
+[Cute pup!][pup]
+```
+
+And then place the actual link anywhere in the document:
+
+```
+[pup]: https://picsum.photos/200
+```
+
+You can also use an image as the link itself:
+
+```
+[![](https://picsum.photos/200
+)](https://picsum.photos/200
+)
+
+or
+
+[<img src="https://picsum.photos/200
+">](https://picsum.photos/200
+)
+```
+
+[![](https://picsum.photos/200)](https://picsum.photos/200)
+
+## Lists
+
+Bulleted text can be created by using either a \*, - or + with a space in front of the text:
+
+```
+* 1
+* 2
+* 3
+```
+
+outputs as:
+
+- 1
+- 2
+- 3
+
+An ordered list can be created this way:
+
+```
+1. first
+1. second
+1. third
+```
+
+1.  first
+1.  second
+1.  third
+
+The specific number you use makes no difference. You could use all 1s, go 1-2-3-etc, or 1-6-3-7-5.
+
+You can also create intented lists by tabbing in or using 2+ spaces:
+
+```
+* one
+  * two
+    * three
+```
+
+shows up as:
+
+- one
+  - two
+    - three
+
+And can also create paragraph tags within a list item, and even use images, code blocks, etc. as list items:
+
+````
+* one
+  * two
+
+  second two
+
+  ![](https://picsum.photos/200)
+
+  ```js
+  var x = 100;
+````
+
+- one
+
+  - two
+
+    second two
+
+    ![](https://picsum.photos/200)
+
+    ```js
+    var x = 100;
+    ```
+
+## Line Breaks
+
+```
+Sentence one.
+Sentence two.
+
+Sentence three.
+```
+
+will show up as:
+
+Sentence one.
+Sentence two.
+
+Sentence three.
+
+In order to create a line break, simply add a `<br>` after a line:
+
+```
+Sentence one.<br>
+Sentence two.
+```
+
+Sentence one.<br>
+Sentence two.
+
+## Horizontal Rules
+
+Create a horizontal line by using at least 3 "=" or "-" and remember to lease space between them and above text to avoid them being conveted into H1 or H2 tags:
+
+```
+Words and stuff
+
+---
+
+===
+```
+
+will appear as:
+
+Words and stuff
+
+===
+
+---
+
+---
