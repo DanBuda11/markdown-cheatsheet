@@ -1,123 +1,117 @@
-# Markdown Cheatsheet
+# Markdown Guide
+
+I created this to give myself a refresher on markdown as well as put together a resource for me (or others) to use.
+
+## Table of Contents
+
+* [General Font Formatting](#general-font-formatting)
+* [Headings](#headings)
+* [Links](#links)
+* [Images](#images)
+* [Lists](#lists)
+* [Line Breaks](#line-breaks)
+* [Horizontal Rules](#horizontal-rules)
+* [Block Quotes](#block-quotes)
+* [Code Blocks](#code-blocks)
+* [Tables](#tables)
+* [Checkboxes](#checkboxes)
 
 ## General Font Formatting
 
-In order to have
+In order to create paragraphs, a full line is needed between lines of text.
 
-paragraph tags
+        So this sentence will be its own paragraph.
 
-you need a full line between
+        And this sentence will be its own paragraph.
 
-each line of text.
+        But if you try to write this sentence.
+        And then put this sentence directly below, it will look like this:
 
-```
-So like this
+But if you try to write this sentence.
+And then put this sentence directly below, it will look like this:
 
-lalalalalala
-```
+---
 
-```
-but not like this
-lalalalalala
-```
+Bold and italicized font can be done a few different ways. A single set of `*` or `_` on each side of text will show italics, while a double set on each side will show bold:
 
-Bold and italics can be done 2 ways. A single set of `*` or `_` on each side of text will show italics, while a double set on each side of the text will show bold:
+        _This is italic_ OR *This is italic* becomes:
 
-```
-**This is bold** becomes:
-```
+_This is italic_ OR *This is italic*
 
-**This is bold**
+        And similarly, __This is bold__ OR **This is bold** becomes:
 
-```
-and _This is italic_ becomes:
-```
+And similarly, __This is bold__ OR **This is bold** becomes:
 
-_This is italic_
+---
 
-```
-A strikethrough can be done like this: ~~strikethrough~~
-```
+A ~~strikethrough~~ can be made like this:
 
-~~strikethrough~~
+        ~~strikethrough~~
 
 ## Headings
 
-Headings are made by using 1 to 6 "#" in front of the text. So for example an H1 can be made by typing:
+Headings are made by placing `#` in front of text. The number of `#` used determines which heading (1-6) appears.
 
-```
-# This is a Heading
-```
+        #### This is an H4
 
-which outputs as:
+outputs as:
 
-# This is a Heading
+#### This is an H4
 
-H1 to H6 appears as
+Headings appear as:
 
-# H1
+# This is an H1
+## This is an H2
+### This is an H3
+#### This is an H4
+##### This is an H5
+###### This is an H6
 
-## H2
+Alternately, an H1 or H2 can be created by placing at least 3 `-` or `=` under text, and leaving a line empty underneath:
 
-### H3
+        This is an H1
+        ===
 
-#### H4
-
-##### H5
-
-###### H6
-
-Or you can make an H1 or H2 by using equals signs or dashes under text:
-
-```
-Heading 1
-========= (at least 3)
-Heading 2
---------- (at least 3)
-```
-
-# Heading 1
-
-## Heading 2
+        This is an H2
+        ---
 
 ## Links
 
-```
-If you start a link with "http://", <http://link.com> will give you:
-```
+If you start a link with `http://`, you can type `<http://danbuda.com>` and get:
 
-<http://link.com>
+<http://danbuda.com>
 
-Or you can surround text with square brackets followed by the url in curvy brackets (no space between square and curvy brackets):
+If you want to show a link name, and not the url, use the syntax `[link name](url)`. So for example, `[Dan's Portfolio](http://danbuda.com)` gives you:
 
-```
-[Link Name](http://danbuda.com/) becomes:
-```
-
-[Link Name](http://danbuda.com/)
+[Dan's Portfolio](http://danbuda.com)
 
 And you can also add a hover title by including quotes around text after the url:
 
-```
-[Link Number Two](http://danbudahomes.com/ "Dan's Real Estate Website")
-```
+        [Dan's Real Estate Site](http://danbudahomes.com "Dan's Real Estate Site")
 
-[Link Number Two](http://danbudahomes.com/ "Dan's Real Estate Website")
+[Dan's Real Estate Site](http://danbudahomes.com/ "Dan's Real Estate Website") (<-- try hovering)
 
 Another option is to create a reference to a link instead of plopping the url right next to the link text:
 
-```
-[Link Three][1]
+        [Dan's GitHub][1]
 
-And then at the bottom of the file:
-[1]: https://github.com/DanBuda11
-```
+        [Also Dan's Github][1]
 
-[Link Three][1]
+        And then at the bottom of the file:
+        [1]: https://github.com/DanBuda11
 
-[This also goes to the same link][1]
 
-[1]: https://github.com/DanBuda11
+[Dan's GitHub][1]
+
+[Also Dan's GitHub][1]
+
+This makes it easy to add links when you have multiple places in your document that need to link to the same place. Common practice is to put all the link references at the bottom of the document. You can see them by clicking [here](#bottom-links)
+
+Finally, you can create intra-document links by taking the name of a heading in a markdown document, placing `-` between words, and putting a `#` in front of the heading name:
+
+        [Link Name](#-heading-name)
+
+Try it here: [Back to Top](#markdown-guide)
 
 ## Images
 
@@ -177,8 +171,8 @@ An ordered list can be created this way:
 
 ```
 1. first
-1. second
-1. third
+2. second
+3. third
 ```
 
 1.  first
@@ -357,3 +351,9 @@ Create checkboxes by making a list and adding square brackets with a space. Plac
 * [ ] Wake up
 * [X] Brush teeth
 * [ ] Go to work
+
+# Bottom Links
+
+Where did they go?! They don't show up in the actual document! Ok, head back to the [Links](#links) section.
+
+[1]: https://github.com/DanBuda11
