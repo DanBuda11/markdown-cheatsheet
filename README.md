@@ -115,51 +115,51 @@ Try it here: [Back to Top](#markdown-guide)
 
 ## Images
 
-The basic format is: `![]()` where the [] include the alt text (optional) and the () includes the image link. Additionally, you can put hover text inside the () after the image link wrapped in quotes:
+The basic format for images is `![]()`, where the `[]` includes the alt text (optional) and the `()` includes the image link. Additionally, you can put hover text inside the `()` wrapped in quotes and after the image link:
 
-```
-![Random Unsplash picture](https://source.unsplash.com/random "Random image)
-```
+        ![](https://picsum.photos/200)
 
-![Random picture](https://picsum.photos/200 'Random image')
+        ![Random picture](https://picsum.photos/200)
+
+        ![](https://picsum.photos/200 "Random picture")
+
+
+Notice that all 3 images show up, but only the 3rd has hover text:
+
+![](https://picsum.photos/200)
+
+![Random picture](https://picsum.photos/200)
+
+![](https://picsum.photos/200 "Random picture")
+
 
 You can also make references to the image link in the same way you do with a url link:
 
-```
+        [Cute pup!][pup]
+
+And then place the actual link anywhere in the document (mine is at the bottom but just like links, it doesn't appear on the rendered version):
+
+        [pup]: https://picsum.photos/200
+
 [Cute pup!][pup]
-```
 
-And then place the actual link anywhere in the document:
+Additionally, you can use the image itself as a link:
 
-```
-[pup]: https://picsum.photos/200
-```
+        [![](https://picsum.photos/200)](https://picsum.photos/200)
 
-You can also use an image as the link itself:
+        OR
 
-```
-[![](https://picsum.photos/200
-)](https://picsum.photos/200
-)
+        [<img src="https://picsum.photos/200">(https://picsum.photos/200 "Click me!")
 
-or
-
-[<img src="https://picsum.photos/200
-">](https://picsum.photos/200
-)
-```
-
-[![](https://picsum.photos/200)](https://picsum.photos/200)
+[![](https://picsum.photos/200)](https://picsum.photos/200 "Click me!")
 
 ## Lists
 
-Bulleted text can be created by using either a \*, - or + with a space in front of the text:
+Bulleted lists can be created by using either a `*`, `-` or `+` with a space between the symbol and the text:
 
-```
-* 1
-* 2
-* 3
-```
+        * 1
+        * 2
+        * 3
 
 outputs as:
 
@@ -169,66 +169,76 @@ outputs as:
 
 An ordered list can be created this way:
 
-```
-1. first
-2. second
-3. third
-```
+        1. first
+        2. second
+        3. third
 
 1.  first
-1.  second
-1.  third
+2.  second
+3.  third
 
-The specific number you use makes no difference. You could use all 1s, go 1-2-3-etc, or 1-6-3-7-5.
+The specific numbers you use make no difference as long as you start with whatever number you want to start with. For example:
+
+        1. first
+        1. second
+        1. third
+
+        AND
+
+        1. first
+        9. second
+        7. third
+
+will all look like this:
+
+1. first
+9. second
+7. third
 
 You can also create intented lists by tabbing in or using 2+ spaces:
 
-```
-* one
-  * two
-    * three
-```
+        * one
+          * two
+            * three
 
 shows up as:
 
-- one
-  - two
-    - three
-
-And can also create paragraph tags within a list item, and even use images, code blocks, etc. as list items:
-
-````
 * one
   * two
+    * three
 
+And can use paragraph tags within a list item; use images, code blocks, etc. as list items:
+
+        * one
+          * two
+
+          second two
+
+          ![](https://picsum.photos/200)
+
+          ```js
+          var x = 100;
+          ```
+
+Will appear as:
+
+* one
+  * two
+  
   second two
 
   ![](https://picsum.photos/200)
 
   ```js
   var x = 100;
-````
-
-- one
-
-  - two
-
-    second two
-
-    ![](https://picsum.photos/200)
-
-    ```js
-    var x = 100;
-    ```
+  ```
 
 ## Line Breaks
 
-```
-Sentence one.
-Sentence two.
+        Sentence one.
+        Sentence two.
 
-Sentence three.
-```
+        Sentence three.
 
 will show up as:
 
@@ -237,26 +247,24 @@ Sentence two.
 
 Sentence three.
 
+---
+
 In order to create a line break, simply add a `<br>` after a line:
 
-```
-Sentence one.<br>
-Sentence two.
-```
+        Sentence one.<br>
+        Sentence two.
 
 Sentence one.<br>
 Sentence two.
 
 ## Horizontal Rules
 
-Create a horizontal line by using at least 3 "-", and remember to leave space between the "-" and above text to avoid them being conveted into H1 tags:
+Create a horizontal line by using at least 3 `-`, and remember to leave space between the `-` and above text to avoid them being conveted into H1 tags:
 
-```
-Words and stuff
+        Words and stuff
 
----
-Words below
-```
+        ---
+        Words below
 
 will appear as:
 
@@ -268,13 +276,18 @@ Words below
 
 ## Block Quotes
 
-```
-> Hello this is a quote
-```
+        > Hello, this is a quote said by a very famous person.
 
 ends up looking like this:
 
-> Hello this is a quote
+> Hello, this is a quote said by a very famous person.
+
+Line breaks can be used in a quote:
+
+        > Hello, this is a quote said by a very famous person.<br>- Anonymous
+
+> Hello, this is a quote said by a very famous person.<br>- Anonymous
+
 
 ## Code Blocks
 
@@ -283,7 +296,7 @@ Create a code block by tabbing in twice to get this:
     var x = 100;
     const dog = 'snickers';
 
-Or use "```" above and below the text to do the same thing. You can also add the name of the language the text is in to make it format even more:
+Or use ``` above and below the text to do the same thing. You can also add the name of the language the text is in to style it further:
 
     ```js
     var x = 100;
@@ -325,7 +338,7 @@ var x = 100;
 
 ## Tables
 
-Placing vertical lines on both side of content, as well as creating a second line with ":" and dashes, will create a table. Note that the placement of colons determines whether the content is left, right, or center aligned:
+Placing vertical lines on both side of content, as well as creating a second line with `:` and dashes, will create a table. Note that the placement of colons determines whether the content is left, right, or center aligned:
 
     | Dog's Name | Dog's Age | Dog's Color |
     | :--------- | --------: | :---------: |
@@ -342,7 +355,7 @@ Placing vertical lines on both side of content, as well as creating a second lin
 
 ## Checkboxes
 
-Create checkboxes by making a list and adding square brackets with a space. Placing an "X" inside the brackets will add the check:
+Create checkboxes by making a list and adding square brackets with a space. Placing an `X` inside the brackets will add the check:
 
     * [ ] Wake up
     * [X] Brush teeth
@@ -357,3 +370,4 @@ Create checkboxes by making a list and adding square brackets with a space. Plac
 Where did they go?! They don't show up in the actual document! Ok, head back to the [Links](#links) section.
 
 [1]: https://github.com/DanBuda11
+[pup]: https://picsum.photos/200
