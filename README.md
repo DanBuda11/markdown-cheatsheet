@@ -87,9 +87,9 @@ If you want to show a link name, and not the url, use the syntax `[link name](ur
 
 And you can also add a hover title by including quotes around text after the url:
 
-        [Dan's Real Estate Site](http://danbudahomes.com "Dan's Real Estate Site")
+        [Dan's Real Estate Site](https://danbudahomes.com/ "Dan's Real Estate Site")
 
-[Dan's Real Estate Site](http://danbudahomes.com/ "Dan's Real Estate Website") (<-- try hovering)
+[Dan's Real Estate Site](https://danbudahomes.com/ "Dan's Real Estate Website") (<-- try hovering)
 
 Another option is to create a reference to a link instead of plopping the url right next to the link text:
 
